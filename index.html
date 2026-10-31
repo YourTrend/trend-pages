@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trend — a new way to discover the clothes you love.">
+  <title>Trend</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #fffefa; color: #29271f; font-family: Didot, 'Bodoni 72', Georgia, serif; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid #a9894c; outline-offset: 6px; }
+    .announcement { padding: 8px 20px; text-align: center; background: #f0e7d5; color: #705827; font-size: 12px; letter-spacing: 1.5px; }
+    header { position: absolute; right: 4%; top: 60px; z-index: 1; }
+    .wordmark { font-size: 32px; letter-spacing: 8px; }
+    .intro { min-height: 105svh; padding: 170px 13% 140px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; background: radial-gradient(ellipse at 75% 40%, #e6d6ac40, transparent 55%); }
+    .intro::after { content: ''; position: absolute; width: 65vw; height: 65vw; right: -45vw; top: 20%; border: 1px solid #b2985b30; border-radius: 50%; box-shadow: 0 0 0 30px #b2985b08, 0 0 0 80px #b2985b06, 0 0 0 140px #b2985b04; pointer-events: none; }
+    h1 { margin: 0; font-size: clamp(64px, 7.3vw, 112px); line-height: 1.04; font-weight: 400; letter-spacing: -3px; }
+    h1 span { display: block; }
+    .gold { color: #a9894c; }
+    .intro p { max-width: 420px; margin: 28px 0 0; font-size: 18px; line-height: 1.6; color: #82765f; }
+    .careers { margin: 0 13%; padding: 80px 0 100px; border-top: 1px solid #d9ceb7; }
+    .openings { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
+    h2 { margin: 0; font-size: 68px; font-weight: 400; letter-spacing: -2px; }
+    .jobs { margin: 0; padding: 0; list-style: none; }
+    .jobs a { display: flex; justify-content: space-between; gap: 20px; padding: 27px 0; border-bottom: 1px solid #ddd5c5; font-size: 25px; transition: color .2s, padding .2s; }
+    .jobs a:hover { color: #a9894c; padding-left: 10px; }
+    .jobs span { color: #a9894c; }
+    .contact { margin: 100px 0 0; text-align: right; font-size: clamp(25px, 3.5vw, 48px); color: #a9894c; }
+    .contact a:hover { text-decoration: underline; text-underline-offset: 8px; }
+    .founders { margin: 0; padding: 32px 25px 40px; text-align: center; color: #82765f; font-size: 15px; line-height: 1.6; }
+    footer { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 28px 4%; border-top: 1px solid #e9e2d4; color: #82765f; font-size: 14px; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 24px; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 700px) {
+      header { right: 25px; top: 57px; }
+      .wordmark { font-size: 26px; letter-spacing: 5px; }
+      .intro { min-height: 95svh; padding: 140px 25px 100px; }
+      h1 { font-size: clamp(38px, 11.8vw, 70px); letter-spacing: -1.6px; }
+      .intro p { font-size: 16px; max-width: 300px; }
+      .careers { margin: 0 25px; padding: 50px 0 60px; }
+      .openings { grid-template-columns: 1fr; gap: 15px; }
+      h2 { font-size: 53px; }
+      .jobs a { font-size: 21px; padding: 24px 0; }
+      .contact { margin-top: 65px; text-align: left; font-size: 28px; overflow-wrap: anywhere; }
+      .founders { font-size: 14px; }
+      footer { padding: 23px 25px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .jobs a { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">Angel funded</div>
+  <header><a class="wordmark" href="#home" aria-label="Trend home">TREND</a></header>
+  <main id="home">
+    <section class="intro" aria-labelledby="headline">
+      <h1 id="headline"><span>Revolutionizing</span><span>the way you</span><span class="gold">shop.</span></h1>
+      <p>What if there was a way the clothes you love found you? Your next favorite might be closer than you think.</p>
+    </section>
+    <section class="careers" aria-labelledby="join-title">
+      <div class="openings">
+        <h2 id="join-title">Join Us.</h2>
+        <ul class="jobs">
+          <li><a href="mailto:daniel@yourtrend.ing?subject=Software%20Engineer%20at%20Trend">Software Engineer <span aria-hidden="true">↗</span></a></li>
+          <li><a href="mailto:daniel@yourtrend.ing?subject=Algorithms%20Engineer%20at%20Trend">Algorithms Engineer <span aria-hidden="true">↗</span></a></li>
+          <li><a href="mailto:daniel@yourtrend.ing?subject=Computer%20Vision%20Engineer%20at%20Trend">Computer Vision Engineer <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <p class="contact"><a href="mailto:daniel@yourtrend.ing">daniel@yourtrend.ing</a></p>
+    </section>
+  </main>
+  <p class="founders">Co-Founded by Engineers at the University of Pennsylvania</p>
+  <footer>
+    <span>© 2026 TREND LLC</span>
+    <nav aria-label="Legal"><a href="https://trend-business.vercel.app/terms">Terms of Service</a><a href="https://trend-business.vercel.app/privacy">Privacy Policy</a></nav>
+  </footer>
+</body>
+</html>
